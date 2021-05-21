@@ -1,81 +1,14 @@
-# system-design-questions
-常见的系统设计问题和解决方案翻译
-### 设计一个网页爬虫
+### system-design-question
+System-Design-Primer中列出了八个常见系统设计的solution（见下文），是学习系统架构很好的入门资料，鉴于目前暂未找到中文翻译，本人目前尝试翻译其内容，仅供学习和参考。
 
-#### 第一步：用例大纲和约束条件
+Design Pastebin.com (or Bit.ly)	
+Design the Twitter timeline and search (or Facebook feed and search)	
+Design a web crawler	
+Design Mint.com	
+Design the data structures for a social network	
+Design a key-value store for a search engine	
+Design Amazon's sales ranking by category feature	
+Design a system that scales to millions of users on AWS	
+Add a system design question	
 
-收集需求并确定问题的范围。 提出问题以澄清用例和约束。 讨论假设。
-
-因为如果没有面试官解决澄清的问题，我们将定义一些用例和约束。
-
-##### 用例
-
-**我们将问题的范围限定为仅处理以下用例：**
-
-- 服务 爬取一系列url列表：
-  - 在包含搜索词的页面上生成单词的反向索引（url -> hashed url）
-  - 生成页面的标题和摘要
-    - 标题和摘录是静态的，它们不会根据搜索查询而改变
-
-- 用户输入搜索词，并查看爬网程序生成的带有标题和摘要的相关页面的列表
-  - 只需为该用例勾画高级组件和交互，而无需深入研究
-
-- 服务具有高可用性
-
-拓展延伸功能
-
-- 搜索分析
-- 个性化搜索结果
-- 网页排名
-
-##### 约束和假设
-
-**状态假设**
-
-- 流量分布不均
-  - 一些搜索非常受欢迎，而其他搜索仅执行一次
-
-- 仅支持匿名用户
-- 生成搜索结果的速度需要快
-- Web搜寻器不应陷入无限循环
-  - 如果图包含一个循环，我们将陷入无限循环
-
-- 10亿个爬网链接
-  - 需要定期抓取页面以确保新时效性
-  - 平均刷新率约为每周一次，在热门网站上更为频繁
-    - 每月有40亿个爬网链接
-  - 每个网页的平均存储大小：500 KB
-    - 为简单起见，计数更改与新页面相同
-- 每月1000亿次搜索
-
-练习使用更传统的系统-不要使用solr或nutch等现有系统。
-
-**计算用量**
-
-**如果您使用谷歌的back-of-the-envelope方法进行计算，就与面谈官澄清。**
-
-- 每月存储2 PB的页面内容
-  - 每页500 KB *每月抓取40亿个链接
-  - 3年内存储的页面内容为72 PB
-
-- 每秒1,600个写入请求
-- 每秒40,000个搜索请求
-
-方便的换算指南：
-
-- 2.5 million seconds per month
-- 1 request per second = 2.5 million requests per month
-- 40 requests per second = 100 million requests per month
-- 400 requests per second = 1 billion requests per month
-
-#### 第二步：创造一个高水平设计
-
-高水平设计的所有组件概要
-
-![crwal_hign_level](C:\Users\qwb\Desktop\crwal_hign_level.png)
-
-#### 第三步：设计核心组件
-
-深入研究每个核心组件的细节
-
-用例：爬虫服务爬取一系列url
+来源：https://github.com/donnemartin/system-design-primer
