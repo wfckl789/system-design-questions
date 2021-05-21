@@ -1,4 +1,4 @@
-### system-design-question
+### System-design-question
 System-Design-Primer中列出了七个常见系统设计的solution（见下文），是学习系统架构很好的入门资料，鉴于目前暂未找到中文翻译，本人目前尝试翻译其内容，仅供学习和参考。
 
 设计 Pastebin.com (或者 Bit.ly)  
