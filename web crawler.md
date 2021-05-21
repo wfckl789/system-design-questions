@@ -70,7 +70,8 @@
 
 高水平设计的所有组件概要
 
-![crwal_hign_level](C:\Users\qwb\Desktop\crwal_hign_level.png)
+![crwal_hign_level](https://user-images.githubusercontent.com/42508752/119116950-540f2100-ba5b-11eb-83fe-341ff8df049c.png)
+
 
 #### 第三步：设计核心组件
 
